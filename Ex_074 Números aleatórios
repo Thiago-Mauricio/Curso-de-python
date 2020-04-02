@@ -21,3 +21,6 @@ for c in t:
 print(f'Dentre os números gerados, o maior é : {ma}')
 print(f'E o menor é : {me}')
     
+#modelo professor:
+print(f'O maior valor sorteado foi {max(t)}')
+print(f'O menor valor sorteado foi {min(t)}')
