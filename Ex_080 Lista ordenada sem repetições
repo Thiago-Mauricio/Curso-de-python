@@ -1,5 +1,6 @@
+'''Crie um programa onde o usuário possa digitar cinco números e cadastre-os em uma lista, já na posição correta de inserção(sem usar sort()). No final mostre a lista ordenada na tela.'''
+
 n = []
-c = 0
 n1 = int(input('Digite um valor: '))
 n.append(n1)
 print('Valor adicionado a lista!')
@@ -55,3 +56,22 @@ else:
     print('Adicionado no final da lista!')
 print('=' * 50)
 print(f'Os valores digitados foram {n}.')
+
+
+#Solução do professor:
+lista = []
+for c in range(0,5):
+    a = int(input('Digite um valor: '))
+    if c == 0 or a > lista [-1]:
+        lista.append(a)
+        print('Adicionado no final da lista!')
+    else:
+        pos = 0
+        while pos < len(lista):
+            if a <= lista[pos]:
+                lista.insert(pos, a)
+                print(f'Adicionado na posição {pos} da lista!')
+                break
+            pos += 1
+print('-' * 40)
+print(f'Os valores digitados em ordem foram {lista}')
