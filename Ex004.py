@@ -1,0 +1,20 @@
+#Maneira que fiz:
+v1 = (input('Digite algo: '))
+print('O tipo primitivo deste valor é {}.'.format(type(v1)))
+print('Só tem espaços? {}'.format(v1.isspace()))
+print('É totalment um numero? {}'.format(v1.isnumeric()))
+print('É totalmente alfabético? {}'.format(v1.isalpha()))
+print('Esta escrito totalmente em maiúsculas? {}'.format(v1.isupper()))
+print('Está escrito totalmente em minúsculas? {}'.format(v1.islower()))
+print('É identificavel? {}'.format(v1.isidentifier()))
+
+#Maneira do professor:
+a = input('Digite algo: ')
+print('O tipo primitivo desse valor é', type(a))
+print('Só tem espaços?', a.isspace())
+print('É um numero?', a.isnumeric())
+print('É alfabético?', a.isalpha())
+print('É alfanumérico?', a.isalnum())
+print('Está em maiúscula?', a.isupper())
+print('Está em minúscula?', a.islower())
+print('Está capitalizada?', a.istitle())

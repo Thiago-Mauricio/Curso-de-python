@@ -1,0 +1,7 @@
+nome = input('Digite sem nome completo: ')
+print('Nome todo em letra maiúscula:', nome.upper())
+print('Nome todo em letra minúscula: ', nome.lower())
+list = nome.split()
+print(f'Seu nome tem {len("".join(list))} letras.')
+print(f'Seu nome tem {len(nome) - nome.count(" ")} letras.')
+print(f'Seu primeiro nome tem {len(list[0])} letras.')
