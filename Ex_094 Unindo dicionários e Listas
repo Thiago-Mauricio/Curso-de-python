@@ -20,7 +20,8 @@ while True:
     if stop == 'N':
         break
 média = soma / len(cadastro)
-print(f'Foram cadastradas {len(cadastro)} pessoas.')
+print('=-' * 30)
+print(f'Foram cadastradas {len(cadastro)} pessoas no total.')
 print('=-' * 30)
 print(f'A idade média do grupo é de {média:.1f} anos')
 print('=-' * 30)
