@@ -23,7 +23,7 @@ def sorteio():
         sleep(0.5)
     print('PRONTO !')
     somaPAR(valores)
-    valores.clear()
+
 
 sorteio()
 sorteio()
