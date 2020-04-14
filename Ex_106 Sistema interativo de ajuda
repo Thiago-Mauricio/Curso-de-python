@@ -11,7 +11,7 @@ c = ('\033[m', #0 - sem cores
 '\033[0;30;46m', # 6 - branco
 );
 def ajuda(com):
-    título(f'Acessando o manual do comando \ "{com}\"', 4)
+    título(f'Acessando o manual do comando "{com}"', 4)
     print(c[6], end='')
     help(com)
     print(c[0], end='')
