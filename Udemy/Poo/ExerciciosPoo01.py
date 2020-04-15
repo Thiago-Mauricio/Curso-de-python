@@ -13,14 +13,16 @@ class Line(object):
         
     def distance(self):
         """Calcula a distância entre coor1 e coor2"""
-        a = pow((self.coor1[0] - self.coor2[0]), 2)
-        b = pow((self.coor1[1] - self.coor2[1]), 2)
-        return sqrt(a + b)
+        x1,y1 = self.coor1
+        x2,y2 = self.coor2
+        return ((x2-x1) ** 2 + (y2-y1) ** 2)**0.5
         
     
     def slope(self):
         """Retorna a inclinação da reta:"""
-        return (self.coor2[1] - self.coor1[1]) / (self.coor2[0] - self.coor1[0])
+        x1,y1 = self.coor1
+        x2,y2 = self.coor2
+        return (y2 - y1) / (x2 - x1)
         
 
 c1 = (3, 2)
