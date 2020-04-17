@@ -59,3 +59,4 @@ def jogo_da_vida(seed):
         for c, passagem in enumerate(linha):
             nova_ger[r][c] = célula_check(obter_seção(seed, r, c))
     return nova_ger
+
