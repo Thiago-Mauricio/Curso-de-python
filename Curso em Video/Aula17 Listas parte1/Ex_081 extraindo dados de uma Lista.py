@@ -1,25 +1,24 @@
 '''Crie um programa que vai ler vários números e colocar em uma lista.
-A)Quantos números foram digitados.
-B)A lista de calores ordenada de forma decrescente.
+A) Quantos números foram digitados.
+B) A lista de calores ordenada de forma decrescente.
 C) Se o valor 5 foi digitado e está ou não na lista.'''
 
-l = []
+lista = []
 while True:
-    l.append(int(input('Digite um número: ')))
-    
+    while True:
+        try:
+            lista.append(int(input('Digite um número inteiro: ')))
+            break
+        except:
+            print('Erro: O campo deve ser preenchido com um númeor inteiro')
     stop = ''
     while stop != 'N' and stop != 'S':
         stop = input('Deseja continuar? [S/N] ').strip().upper()
     if stop == 'N':
         break
-print(f'A quantidade de números digitados foi {len(l)}')
-l.sort(reverse=True)
-print(f'Os números digitados em ordem decrescente são: {l}')
-if 5 in l:
-    print('O número 5 está na lista.')
-    #para saber o posição do 5 na lista, não foi pedido no exercicio
-    #for p, a in enumerate(l):
-        #if a == 5:
-            #print(p)
+print(f'Foram digitados {len(lista)} números')
+print(f'Os números digitados foram {sorted(lista)}')
+if 5 in lista:
+    print (f'O valor 5 foi digitado na posição {lista.index(5)}')
 else:
-    print('O número 5 não foi digitado!')
+    print(f'O valor 5 não foi digitado na lista')
