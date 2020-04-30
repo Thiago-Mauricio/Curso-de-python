@@ -1,23 +1,18 @@
 from random import randint
 print(randint(10, 121))
 
-while True:
-    while True:    
-        try:
-            n1 = int(input('Digite um valor: '))
-            n2 = int(input('Digite outro valor: '))
-            break
-        except:
-            print('Erro: Ambos os valores precisam ser números inteiros:')
-    if n1 > n2:
-        print(f'{n1} é maior que {n2} !')
-    elif n1 == n2:
-        print (f'{n1} e {n2} são iguais!')
+lista = (
+    'Lápis', 1.50,
+    'borracha', 2.00,
+    'caderno', 15.0,
+    'estojo', 9.00,
+    'caneta', 2.50,
+    'apontador', 1.00
+)
+print('-' * 40)
+for c in range(0, len(lista)):
+    if c % 2 == 0:
+        print('{:.<30}'.format(lista[c]), end='')
     else:
-        print(f'{n2} é maior que {n1} !')
-    stop = ''
-    while stop != 'N' and stop != 'S':
-        stop = input('Deseja continuar? [S/N] ').strip().upper()
-    if stop == 'N':
-        break
-print('FIM !')
+        print('R$ {:>4.2f}'.format(lista[c]))
+print('-' * 40)
